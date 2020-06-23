@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Username = () => {
-  const [username, setUsername] = userState("");
+  const [username, setUsername] = useState("");
   return (
     <div>
       <h1>Username</h1>
