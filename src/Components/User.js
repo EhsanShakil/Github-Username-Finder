@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import Fetch from "./Api";
 
 const Name = () => {
-  const [data, setData] = useState("EhsanShakil");
+  const [data, setData] = useState({});
   const [username, setUsername] = useState("");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setData(await Fetch(data));
-    };
-    fetchData();
-  }, []);
+  const handleSubmit = () => {
+    const fetchData = Fetch(username);
+  };
 
   return (
     <div>
@@ -20,6 +17,9 @@ const Name = () => {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
+      <button type="button" onClick={handleSubmit}>
+        Search
+      </button>
       {console.log(data)}
     </div>
   );

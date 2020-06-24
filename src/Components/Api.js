@@ -7,9 +7,9 @@ const Fetch = async (username) => {
   const changableurl = `${url}/${username}`;
   try {
     const { data } = await axios.get(changableurl);
-    return data;
+    console.log(data);
   } catch (error) {
-    console.log(error);
+    throw new Error("Profile Not Found");
   }
 };
 
