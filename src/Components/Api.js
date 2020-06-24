@@ -1,9 +1,16 @@
-import React from "react";
+import axios from "axios";
 
-const url = "https://api.github.com/users/";
+const url = "https://api.github.com/users";
 
-const Fetch = () => {
-  return <div>Fetch</div>;
+const Fetch = async (username) => {
+  console.log(username);
+  const changableurl = `${url}/${username}`;
+  try {
+    const { data } = await axios.get(changableurl);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default Fetch;
