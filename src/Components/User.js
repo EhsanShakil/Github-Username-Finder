@@ -13,7 +13,7 @@ const Name = () => {
       setData(fetchData);
     }
     if (!username) {
-      alert("NO Username FOund");
+      alert("No Username Found");
     }
     setUsername("");
   };
