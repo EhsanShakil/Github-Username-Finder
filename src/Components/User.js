@@ -41,7 +41,7 @@ const Name = () => {
       <h1>{data.name}</h1>
       <h1>{data.location}</h1>
       <img src={data.avatar_url} alt={data.avatar_url} />
-      <a href={data.html_url} target="_blank">
+      <a href={data.html_url} rel="noopener noreferrer" target="_blank">
         {data.html_url}
       </a>
     </div>
