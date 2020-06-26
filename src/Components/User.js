@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Fetch from "./Api";
 import "../App.css";
-
 const Name = () => {
   const [data, setData] = useState({});
   const [username, setUsername] = useState("");
@@ -39,12 +38,19 @@ const Name = () => {
           Search
         </button>
       </div>
-      <h1>{data.name}</h1>
-      <h1>{data.location}</h1>
-      <img src={data.avatar_url} alt={data.avatar_url} />
-      <a href={data.html_url} rel="noopener noreferrer" target="_blank">
-        {data.html_url}
-      </a>
+      <div className="row">
+        <img className="image" src={data.avatar_url} alt={data.avatar_url} />
+        <div className="coloum">
+          <h1>{data.name}</h1>
+          <h1>{data.location}</h1>
+          <a href={data.html_url} target="_blank">
+            <button className="ui primary button" onClick={handleSubmit}>
+              <i className="github icon"></i>
+              {data.html_url}
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
