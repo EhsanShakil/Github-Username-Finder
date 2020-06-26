@@ -44,10 +44,7 @@ const Name = () => {
           <h1>{data.name}</h1>
           <h1>{data.location}</h1>
           <a href={data.html_url} target="_blank">
-            <button className="ui primary button" onClick={handleSubmit}>
-              <i className="github icon"></i>
-              {data.html_url}
-            </button>
+            {data.html_url}
           </a>
         </div>
       </div>

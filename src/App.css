@@ -9,8 +9,6 @@
   margin: 30px;
   display: flex;
   flex-direction: row;
-
-  border: 2px solid black;
 }
 .coloum {
   display: flex;
@@ -19,5 +17,4 @@
 }
 .image {
   border-radius: 100%;
-  width: 200px;
 }
