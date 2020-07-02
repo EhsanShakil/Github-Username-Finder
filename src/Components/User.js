@@ -43,7 +43,7 @@ const Name = () => {
         <div className="coloum">
           <h1>{data.name}</h1>
           <h1>{data.location}</h1>
-          <a href={data.html_url} target="_blank">
+          <a href={data.html_url} target="_blank" rel="noopener noreferrer">
             {data.html_url}
           </a>
         </div>
